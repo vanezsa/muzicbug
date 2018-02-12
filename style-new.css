@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,400i,600,800,900");
+h1 {
+  line-height: 36px; }
+
+.text-italic {
+  color: #C8257B;
+  font-style: italic;
+  font-weight: 400; }
+
+.text-extra-bold {
+  color: #4A4A4A;
+  font-weight: 800; }
+
+.title-text {
+  font-size: 32px;
+  line-height: 36px; }
+
+/*# sourceMappingURL=style-new.css.map */

@@ -1,0 +1,557 @@
+/*
+ Theme Name:   Muzicbug
+ Theme URI:    
+ Description:  
+ Author:      
+ Author URI:   
+ Template:     understrap
+ Version:      1.0
+ License:      Commercial
+ Text Domain:  understrap-child
+ Tags: 
+*/
+
+
+
+$col-link: #3D6AD0;
+$col-hover: #16316E;
+$col-body: #0C0C0C;
+$col-green: #0CAC2A;
+$col-lime: #DEEFB8;
+
+$ft-head: 'Nunito', sans-serif;
+
+@mixin btn {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.25;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;	
+}
+@mixin btn-primary {
+    background-color: $col-link;
+    border-color: $col-link;
+	color: white;
+	&:hover {
+		background-color: $col-hover;
+		cursor: pointer;
+	}
+}
+
+
+body {
+	/* The Muzicbug Program: */
+	font-family: $ft-head;
+	font-size: 26px;
+	color: $col-body;
+	line-height: 36px;
+	
+	/* Pianoforte solicitud: */
+	font-size: 18px;
+	color: #4A4A4A;
+}
+a {
+	color: $col-link;
+	/* These are technically the same, but use both */
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	
+	-ms-word-break: break-all;
+	/* This is the dangerous one in WebKit, as it breaks things wherever */
+	word-break: break-all;
+	/* Instead use this non-standard one: */
+	word-break: break-word;
+	
+	/* Adds a hyphen where the word breaks, if supported (No Blink) */
+	-ms-hyphens: auto;
+	-moz-hyphens: auto;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+	&:hover {
+		color: $col-link;	
+	}
+}
+
+.h1, h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+	font-family: $ft-head;
+}
+h1, .h1 {
+	/* The Program: */
+	font-weight: 900;
+	font-size: 24px;
+	color: #0C0C0C;
+	line-height: 1.5rem;
+}
+h2, .h2 {
+	/* The Program: */
+	font-weight: bold;
+	font-size: 20px;
+	color: #4A4A4A;
+	line-height: 1.25rem;
+}
+h3, .h3 {
+	/* The Program: */
+	/* BEING ACTIVE: */
+	font-weight: bold;
+	font-size: 14px;
+	color: #C8257B;
+	letter-spacing: 3.56px;
+	text-transform: uppercase;
+}
+h4, .h4 {
+	/* Follow Us: */
+	font-weight: bold;
+	font-size: 18px;
+	color: #4A4A4A;
+	line-height: 1.5rem;
+}
+p {
+    line-height: 1.3;
+}
+.btn {
+	&:hover {
+		cursor: pointer;
+	}
+}
+.btn-primary {
+	@include btn-primary;
+}
+.btn-audio {
+	background-color: $col-green;
+	color: white;
+	&:hover {
+		background-color: darken($col-green,20%);		
+	}
+}
+.btn-cart {
+	padding: 1rem;
+}
+
+.btn-social {
+	display: block;
+	text-align: center;
+	width: 44px;
+	height: 44px;
+	line-height: 46px;
+	border-radius: 50%;
+	color: white;
+	&:hover {
+		color: white;
+	}
+	&.btn-fb {
+		background-color: #3A589B
+	}
+}
+.site-header {
+	@media (min-width: 767px) {
+		//height: 140px;
+		height: 120px;
+	}
+	.navbar {
+		padding: 1rem 0;
+	}
+}
+.site-footer {
+	height: 120px;
+	/* © MUZICBUG 2017: */
+	font-size: 14px;
+	color: #4A4A4A;
+}
+.links-legal {
+	a {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+}
+
+// connect
+.connect {
+	.title {
+		text-transform: uppercase
+	}
+}
+
+.bg-home-masthead {
+	background-image: url('i/bg-banner-home-170711.png');
+	background-repeat: no-repeat;
+	//background-size: 1440px auto;
+	background-size: cover;
+	background-position: center center;
+	@media (max-width: 767px) {
+		background-image: url('i/bg-lime-tex@2x.png');
+	}
+}
+.bg-lime-tex {
+	background-image: url('i/bg-lime-tex@2x.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.carousel-control-next, .carousel-control-prev {
+	border: 1px solid lighten($col-link,20%);
+	border-radius: 50%;
+	width: 70px;
+	height: 70px;
+	color: $col-link;
+	text-align: center;
+	&:hover {
+		border: 1px solid $col-link;
+		color: $col-link;
+		background-color: $col-link;
+		color: white;
+	}
+}
+.mb-carousel-caption {
+	/* Ferdi loves to play: */
+	font-size: 18px;
+	text-align: left;
+}
+.promo {
+	.card {
+		background-color: $col-lime; 
+	}
+	.card-columns {
+		column-count: 3;
+	}
+}
+
+// The Program
+#the-program {
+	.card-footer {
+		background-color: $col-lime;
+	}
+	.card-image {
+		text-align: center;
+	}
+	.card-title {
+		font-size: 1.75rem;
+	}
+	.card-link {
+		font-size: .9rem;
+		
+	}
+	.card-link+.card-link {
+		margin-left: 1rem;	
+	}
+	a {
+		hyphens: none;
+	}
+}
+
+// shop home
+.card-head {
+	text-align: center;
+	.icon-character {
+		width: 100px;
+		margin-right: 1rem;
+	}
+	.card-title {
+		text-align: left;
+		margin-top: 1rem;
+		line-height: normal;
+	}
+}
+
+// shop category / loop
+.woocommerce-loop-product__link {
+	&:hover {
+		text-decoration: none;
+		.woocommerce-loop-product__title {
+			text-decoration: underline;	
+		}
+	}
+	.attachment-shop_catalog.size-shop_catalog {
+		width: 100%;
+		height: auto;
+	}
+	.product-meta-title {
+		font-size: .8rem;
+		font-weight: 400;
+		margin: 10px 0 5px 0;
+	}
+	.woocommerce-loop-product__title {
+		display: block;
+		font-weight: bold;
+		font-size: .8rem;
+		color: #0D0D0D;
+		margin: 5px 0;
+	}
+	.price {
+		display: block;
+		line-height: 1rem;
+	}
+	.woocommerce-Price-amount.amount {
+		/* $99: */
+		font-weight: 300;
+		font-size: .9rem;
+		color: #0D0D0D;
+	}
+}
+.add_to_cart_button.btn-block {
+	display: none;
+}
+
+// single product
+.shipping-banner {
+	background-color: $col-lime;
+}
+.woocommerce-product-gallery__trigger {
+	display: none;
+}
+.attachment-shop_single.size-shop_single.wp-post-image {
+	max-width: 100%;
+	height: auto;
+}
+.entry-summary {
+	.cart {
+		display: flex;
+		margin-top: 1.75rem;
+		margin-bottom: 1rem;
+		.quantity {
+			width: 4rem;
+			margin-right: 1rem;
+		}
+		.single_add_to_cart_button {
+			flex-grow: 0;
+		}
+	}
+}
+.single_add_to_cart_button.button.alt {
+	@include btn;
+	@include btn-primary;
+}
+.woocommerce-tabs {
+	.nav-tabs {
+		border-bottom: 0;
+		.nav-item {
+			margin-right: 1rem;
+			&.active {
+				.product-meta-title {
+					font-weight: bold;
+				}
+			}
+			.product-meta-title {
+				font-weight: normal;
+			}
+		}
+	}
+	.tab-panel {
+		h2 {
+			display: none;
+		}
+	}
+}
+.product-meta-title {
+	/* About the Skill: */
+	font-size: .8rem;
+	font-weight: 700;
+	letter-spacing: .1rem;
+	line-height: 1rem;
+	color: #6A6A6A;
+	text-transform: uppercase;
+	margin-bottom: 1rem;
+}
+.single-product-skill {
+	.skill-icon {
+		margin-right: 1rem;	
+	}
+	.skill-name {
+		/* Being Active: */
+		margin-top: 0;
+		font-weight: bold;
+		color: #0D0D0D;
+		line-height: 1rem;
+	}
+	.skill-description {
+		font-size: 18px;
+		color: #4A4A4A;
+		line-height: 1.25rem;
+	}
+}
+
+//
+
+
+// cart
+.woocommerce table.shop_table th,
+.woocommerce table.shop_table td {
+    vertical-align: top;
+    padding: .7rem 1rem;
+}
+
+// music player
+.mb-audio-sample {
+	.sc_player_container1,
+	.mb-audio-sample-label {
+		display: flex;
+	}
+}
+.sc_player_container1 .myButton_play {
+	background-image: url('i/btn-play.png') !important;
+	&:hover {
+		background-image: url('i/btn-play-hover.png') !important;
+	}
+}
+.sc_player_container1 .myButton_stop {
+	background-image: url('i/btn-pause.png') !important;
+	&:hover {
+		background-image: url('i/btn-pause-hover.png') !important;
+	}
+}
+	
+.sc_player_container1 .myButton_play,
+.sc_player_container1 .myButton_stop {
+	background-size: 70px 70px;
+    background-color: #0CAC2A !important;
+    cursor: pointer !important;
+    width: 70px !important;
+    height: 70px !important;
+    border-radius: 50%;
+    &:focus {
+	    outline: 0 !important;
+    }
+}
+
+.woocommerce-pagination {
+	margin-top: 2rem;
+	margin-bottom: 3rem;
+	.page-numbers {
+		list-style: none;
+		padding: 0;
+		li {
+			display: inline-block;
+			font-size: large;
+			a.page-numbers {
+				border: 1px solid silver;
+				display: block;
+				padding: 1rem 2rem;
+				&:hover {
+					background-color: $col-link;
+					color: white;
+					text-decoration: none;
+				}
+			}
+			.prev.page-numbers {
+				border-top-left-radius: 6px;
+				border-bottom-left-radius: 6px;
+			}
+			.next.page-numbers {
+				border-top-right-radius: 6px;
+				border-bottom-right-radius: 6px;
+			}
+			.prev.page-numbers,
+			.current.page-numbers,
+			.next.page-numbers {
+				border: 1px solid silver;
+				background-color: transparent;
+			}
+			.page-numbers.current {
+				display: block;
+				padding: 1rem 2rem;
+				color: silver;
+			}
+		}
+	}
+}
+#wrapper-index {
+	h1.entry-title {
+		margin-top: 1.5rem;
+		margin-bottom: 1rem;
+		a {
+			text-decoration: none;
+		}
+	}
+	.entry-content {
+		margin-top: 2rem;
+	}
+}
+#wrapper-index,
+#single-wrapper {
+	.entry-meta {
+		margin-top: 1rem;
+		margin-bottom: 2rem;
+		color: grey;
+	}
+	h1.entry-title {
+		margin-top: 1.5rem;
+		margin-bottom: 1rem;
+	}
+}
+
+// blog
+#right-sidebar {
+	line-height: 1.25rem;
+	.widget-title {
+		margin-bottom: 1rem;
+	}
+	.widget.widget_recent_entries,
+	.widget.widget_categories {
+		ul {
+			list-style: none;
+			padding-left: 0;
+			margin-bottom: 4rem;
+		}
+	}
+}
+	
+	
+#comments {
+	ol.comment-list {
+		padding-left: 0;
+		list-style: none;
+	}
+}
+
+// promo carousel
+#carousel-product {
+	.slide-bg {
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+	}
+	.promo-slide {
+		height: 500px;
+	}
+	#slide-awards {
+		background-image: url('i/promo-carousel-awards-17726.png');
+	}
+	#slide-10off {
+		background-image: url('i/promo-carousel-10off-17726.png');
+	}
+}	
+
+// Mailchimp
+/* Enter Your Custom CSS Here */
+
+#mc_embed_signup .mc-field-group{
+    float: left;
+    width: 60%!important;
+    margin-right: 1em;
+}
+#mc_embed_signup .btn-primary {
+    padding: 3px 20px!important;
+    height: inherit!important;
+}
+#mc_embed_signup div#mce-responses,
+#mc_embed_signup #mce-error-response{
+    width: 100%!important;
+    margin: 0!important;
+    line-height: 25px;
+}
+#mc_embed_signup #mce-success-response,
+#mc_embed_signup #mce-error-response{
+    width: 100%!important;
+    padding: 0!important;
+    margin: 0!important;
+}
